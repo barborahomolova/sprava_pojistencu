@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Pojisteni Bez Obav</title>
+  </head>
+  <body>
+    <!-- HLAVICKA -->
+    <header>
+      <nav id="header-menu">
+        <p id="logo">Pojištění bez obav</p>
+        <ul id="navigace">
+          <li class="aktivni" id="domu"><a href="index.html">Domů</a></li>
+          <li id="oAplikaci"><a href="oAplikaci.html">O aplikaci</a></li>
+          <li id="kontakt"><a href="kontakt.html">Kontakt</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- FORMULAR -->
+    <main>
+      <h1>Zadejte údaje nového pojištěnce:</h1>
+
+      <form>
+        <div id="image-and-form">
+          <img src="simple-avatar.jpg" alt="avatar" id="avatar-img" />
+
+          <div id="leftBox">
+            <label class="label" for="firstName">Jméno</label>
+            <input
+              type="text"
+              class="form-input"
+              id="firstName"
+              placeholder="Křestní jméno"
+              required
+            />
+
+            <label class="label" for="lastName">Příjmení</label>
+            <input
+              type="text"
+              class="form-input"
+              id="lastName"
+              placeholder="Příjmení"
+              required
+            />
+          </div>
+
+          <div id="rightBox">
+            <label class="label" for="age">Věk</label>
+            <input
+              type="number"
+              class="form-input"
+              id="age"
+              placeholder="Věk"
+            />
+
+            <label class="label" for="phoneNumber">Telefon</label>
+            <input
+              type="text"
+              class="form-input"
+              id="phoneNumber"
+              placeholder="+420..."
+            />
+          </div>
+          <br />
+        </div>
+
+        <input
+          id="add-button"
+          type="submit"
+          value="Přidat pojištěnce"
+          onclick="saveInsuree()"
+        />
+      </form>
+
+      <!-- SEZNAM POJISTENYCH -->
+      <section id="insured-list">
+        <h1 id="list-heading">Seznam pojištěnců:</h1>
+
+        <div id="insuredsTable"></div>
+        <table id="insured-table">
+          <thead>
+            <tr>
+              <th>Jméno</th>
+              <th>Příjmení</th>
+              <th>Telefon</th>
+              <th>Věk</th>
+            </tr>
+          </thead>
+
+          <tbody id="table"></tbody>
+        </table>
+
+        <button id="delete-button" onclick="removeInsurees()">
+          Vymazat pojištěnce
+        </button>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer><p id="copy">&copy; Barbora Homolová 2023</p></footer>
+
+    <!-- JAVASCRIPT -->
+    <script src="js/Insuree.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>
