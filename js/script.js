@@ -10,16 +10,16 @@ function saveInsuree() {
   // vytvoření nového objektu pojistence
   const insuree = new Insuree(firstName, lastName, phoneNumber, age);
 
-  //  ziskat existujici data z local storage a pridat je do pole insurees.
+  // získání dat z local storage a přidání  do pole insurees
   const insurees = JSON.parse(localStorage.getItem("insurees")) || [];
 
   //pridani noveho pojistence do pole
   insurees.push(insuree);
 
-  // ulozit zmenena data o pojistencich to local storage
+  // uložení změněných dat o pojistencich to local storage
   localStorage.setItem("insurees", JSON.stringify(insurees));
 
-  // zobrazit updatovana data do tabulky
+  // zobrazení updatovaných dat do tabulky
   displayInsurees();
 }
 
