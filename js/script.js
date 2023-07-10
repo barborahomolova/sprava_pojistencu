@@ -7,7 +7,7 @@ function saveInsuree() {
   const phoneNumber = document.getElementById("phoneNumber").value;
   const age = document.getElementById("age").value;
 
-  // vytvoření nového objektu pojistence*/
+  // vytvoření nového objektu pojistence
   const insuree = new Insuree(firstName, lastName, phoneNumber, age);
 
   //  ziskat existujici data z local storage a pridat je do pole insurees.
